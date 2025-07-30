@@ -73,9 +73,9 @@ To address this:
 ## Inference
 
 ```
-python Segment_Any_Architecture_Facade_Sample.py --dataset ArchiMetricsNet --batch_size 32  --color_configuration 0 --model_path ckpts/exp/model10000.pt --num_samples 64
+python Build_LlaMa.py --dataset ArchiMetricsNet --batch_size 32  --color_configuration 0 --model_path ckpts/exp/model10000.pt --num_samples 64
 ```
 ## Train
 
 ```
-python Segment_Any_Architecture_Facade_Train.py --dataset ArchiMetricsNet --batch_size 32  --color_configuration 0 
+python Build_LlaMa.py --dataset ArchiMetricsNet --batch_size 32  --color_configuration 0 
