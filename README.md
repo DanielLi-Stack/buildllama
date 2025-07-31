@@ -1,4 +1,7 @@
 # Build-LLaMa: Aligning Architects' Feedback and Domain Knowledge in 3DArchitectural Design Generation
+
+<div align="justify">
+
 Abstract: *How can large language models (LLMs) become 3D architects? In the Architecture, Engineering, and Construction (AEC) stages, generating 3D buildings is a complex task that requires both domain expertise and alignment with user requirements. While machine learning has been increasingly applied to 3D building design, current evaluation methods often rely on statistical metrics like CD and F-score, which fail to reflect real-world human preferences and domain-specific knowledge. As a result, models that perform well on these metrics may still fail to generate practical 3D designs, as architects consider factors such as shape, aesthetics, and structural rationality.
 To address this:
 (1) We propose the \textbf{BuildMetricsNet}, the first 3D building dataset with textual descriptions and evaluation scores of structural feasibility, aesthetic quality, and overall spatial scores, which could be used for further fine-tuning of large language models.
