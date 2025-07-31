@@ -8,6 +8,7 @@ To address this:
 (2) We introduce the \textbf{Build-LLaMa}, a novel framework that pre-trains on generations of text to 3D building mesh, and conducts further fine-tuning with architects' feedback and domain knowledge. 
 (3) We comprehensively evaluate the 3D generation potential of various large language models and carefully assess RLHF effectiveness through architects' validation, providing a new benchmark for 3D generation capacity of large models and offering insights for the architectural community. The code, dataset, and model weights will be released upon acceptance.*
 
+</div>
 
 [**Paper**]() | [**Project Page**]() | [**Model Weights**]() | [**Huggingface Demo**]() |
 
