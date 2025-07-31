@@ -53,10 +53,10 @@ To address this:
 
 ## TODO List
 
-- [x] Release part of Segment-Any-Architecture-Facade dataset. 
-- [ ] Release Segment-Any-Architecture-Facade inference code and pretrain weights.
-- [ ] Upload Segment-Any-Architecture-Facade training dataset.
-- [ ] Release Segment-Any-Architecture-Facade code.
+- [x] Release part of BuildMetricsNet dataset. 
+- [ ] Release Build_LlaMa inference code and pretrain weights.
+- [ ] Upload Build_LlaMa training dataset.
+- [ ] Release Build_LlaMa code.
 
 
 
