@@ -1,12 +1,12 @@
-# Build-LLaMa: Aligning Architects' Feedback and Domain Knowledge in 3DArchitectural Design Generation
+# Build-LLaMa: A Large Language Model Framework Integrating Architects' Feedback and Domain Knowledge in 3D Architectural Design Generation
 
 <div align="justify">
 
-Abstract: *How can large language models (LLMs) become 3D architects? In the Architecture, Engineering, and Construction (AEC) stages, generating 3D buildings is a complex task that requires both domain expertise and alignment with user requirements. While machine learning has been increasingly applied to 3D building design, current evaluation methods often rely on statistical metrics like CD and F-score, which fail to reflect real-world human preferences and domain-specific knowledge. As a result, models that perform well on these metrics may still fail to generate practical 3D designs, as architects consider factors such as shape, aesthetics, and structural rationality.
+Abstract: *How can large language models (LLMs) become 3D architects? In the Architecture, Engineering, and Construction (AEC) stages, generating 3D building models is a demanding process that relies on professional expertise and careful accommodation of user needs. While machine learning has been increasingly applied to 3D building design, current evaluation methods often rely on statistical metrics like Chamfer Distance and F-score, which fail to reflect real-world human preferences and domain-specific knowledge. As a result, models that perform well on these metrics may still fail to generate practical 3D designs, as architects consider factors such as shape, aesthetics, and structural feasibility.
 To address this:
-(1) We propose the \textbf{BuildMetricsNet}, the first 3D building dataset with textual descriptions and evaluation scores of structural feasibility, aesthetic quality, and overall spatial scores, which could be used for further fine-tuning of large language models.
-(2) We introduce the \textbf{Build-LLaMa}, a novel framework that pre-trains on generations of text to 3D building mesh, and conducts further fine-tuning with architects' feedback and domain knowledge. 
-(3) We comprehensively evaluate the 3D generation potential of various large language models and carefully assess RLHF effectiveness through architects' validation, providing a new benchmark for 3D generation capacity of large models and offering insights for the architectural community. The code, dataset, and model weights will be released upon acceptance.*
+(1) We propose the \textbf{BuildMetricsNet}, the first 3D building dataset with textual descriptions and evaluation scores of structural feasibility, aesthetic quality, and overall spatial scores, which can contribute to further fine-tuning of LLMs.
+(2) We introduce the Build-LLM, a novel framework that represents architectural meshes as text and performs supervised fine-tuning and reinforcement learning from human feedback. 
+(3) We comprehensively evaluate the 3D generation potential of various large language models and carefully assess the effectiveness of reinforcement learning from human feedback through architects' validation, providing a new benchmark for 3D generation capacity of large models and offering insights for the architectural community.*
 
 </div>
 
