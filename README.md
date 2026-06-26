@@ -64,7 +64,7 @@ To address this:
 Quantitative results on the BuildMetricsNet dataset
 Best results are **bold**, and second-best results are <u>underlined</u>.
 | Method | CD ↓ | F-score ↑ | FPD ↓ |
-|---|---:|---:|---:|
+|---|:---:|:---:|:---:|
 | Build-LLM | **0.0753** | **0.7887** | <u>0.0387</u> |
 | LLaMA-4-17B-Instruct | 0.0772 | <u>0.7753</u> | 0.0391 |
 | Qwen3-14B | 0.0782 | 0.7475 | 0.0398 |
@@ -76,7 +76,7 @@ Best results are **bold**, and second-best results are <u>underlined</u>.
 Reward-model-based evaluation of different LLMs
 Best results are **bold**, and second-best results are <u>underlined</u>.
 | Method | Structural Feas. ↑ | Aesthetic Quality ↑ | Overall Layout ↑ |
-|---|---:|---:|---:|
+|---|:---:|:---:|:---:|
 | Build-LLM | **5.82** | **5.48** | **5.26** |
 | LLaMA-4-17B-Instruct | <u>5.10</u> | 4.77 | 4.83 |
 | Qwen3-14B | 4.92 | 4.84 | 4.73 |
@@ -87,7 +87,7 @@ Best results are **bold**, and second-best results are <u>underlined</u>.
 
 Comparison on MMLU, GSM8K and MATH
 | Method | MMLU | GSM8K | MATH | Human-Eval | MTBench |
-|---|---:|---:|---:|---:|---:|
+|---|:---:|:---:|:---:|:---:|:---:|
 | LLaMA-4-17B-Instruct | 79.6 | 91.2 | 50.3 | 74.1 | 8.5 |
 | Qwen3-14B | 81.1 | 92.5 | 62.0 | 95.7 | 8.2 |
 | ChatGLM4.1V-9B | 72.4 | 79.6 | 30.4 | 71.8 | 8.3 |
@@ -96,7 +96,7 @@ Comparison on MMLU, GSM8K and MATH
 
 Performance comparison of different retrieval-augmented generation methods on architectural knowledge question answering
 | Method | LLaMA-4-17B avg_score_10 | LLaMA-4-17B avg_time_s | LLaMA-4-17B F1 | Build-LLM Avg_score_10 | Build-LLM Avg_time_s | Build-LLM F1 |
-|---|---:|---:|---:|---:|---:|---:|
+|---|:---:|:---:|:---:|:---:|:---:|:---:|
 | PathRAG_BGE-M3 | 7.3142 | 34.8721 | 0.6143 | 7.2068 | 36.1945 | 0.6016 |
 | PathRAG_JINA-EMBEDDINGS-V3 | 7.5817 | 31.9468 | 0.6315 | 7.4639 | 33.2754 | 0.6198 |
 | LightRAG_BGE-M3 | 7.8875 | 57.2136 | 0.6552 | 7.7341 | 59.8047 | 0.6425 |
@@ -113,14 +113,14 @@ Performance comparison of different retrieval-augmented generation methods on ar
 
 Stepwise fidelity of the parametric post-processing pipeline under bbox-normalized evaluation
 | Transition | n | F1@1% | F1@2% | F1@3% | F1@5% | Completeness@3% | Correctness@3% |
-|---|---:|---:|---:|---:|---:|---:|---:|
+|---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | Fixed → PolyCube | 45 | 0.284 | 0.466 | 0.556 | 0.689 | 0.651 | 0.493 |
 | PolyCube → CoACD | 41 | 0.724 | 0.940 | 0.963 | 0.980 | 0.999 | 0.931 |
 | CoACD → Layered | 41 | 0.523 | 0.778 | 0.840 | 0.912 | 0.998 | 0.734 |
 
 Scale diagnostics summary across stage transitions
 | Transition | n | BBox diag ratio | BBox volume ratio | Center shift | Surface area ratio | Face count ratio |
-|---|---:|---:|---:|---:|---:|---:|
+|---|:---:|:---:|:---:|:---:|:---:|:---:|
 | Fixed → PolyCube | 45 | 1.0000 | 1.0000 | 0.0000 | 1.4122 | 0.9811 |
 | PolyCube → CoACD | 41 | 1.0039 | 1.0184 | 0.0001 | 1.2129 | 0.6501 |
 | CoACD → Layered | 41 | 1.0000 | 1.0000 | 0.0012 | 2.0447 | 3.2522 |
