@@ -61,8 +61,69 @@ To address this:
 *Figure 16) Stepwise examples of the parametric post-processing pipeline from generated meshes to CAD/BIM-compatible structured representations.*
 ![img](assets/16.png)
 
+Quantitative results on the BuildMetricsNet dataset
+Best results are **bold**, and second-best results are <u>underlined</u>.
+| Method | CD ↓ | F-score ↑ | FPD ↓ |
+|---|---:|---:|---:|
+| Build-LLM | **0.0753** | **0.7887** | <u>0.0387</u> |
+| LLaMA-4-17B-Instruct | 0.0772 | <u>0.7753</u> | 0.0391 |
+| Qwen3-14B | 0.0782 | 0.7475 | 0.0398 |
+| Mistral-7B | 0.0824 | 0.7153 | 0.0465 |
+| ChatGLM4.1V-9B | <u>0.0768</u> | 0.7732 | **0.0377** |
+| MiniCPM-4B | 0.0859 | 0.6984 | 0.0491 |
+| DeepSeek-R1-Distill-Qwen-8B | 0.0871 | 0.6890 | 0.0502 |
+
+Reward-model-based evaluation of different LLMs
+Best results are **bold**, and second-best results are <u>underlined</u>.
+| Method | Structural Feas. ↑ | Aesthetic Quality ↑ | Overall Layout ↑ |
+|---|---:|---:|---:|
+| Build-LLM | **5.82** | **5.48** | **5.26** |
+| LLaMA-4-17B-Instruct | <u>5.10</u> | 4.77 | 4.83 |
+| Qwen3-14B | 4.92 | 4.84 | 4.73 |
+| Mistral-7B | 4.20 | 4.10 | 4.30 |
+| ChatGLM4.1V-9B | 4.92 | <u>4.86</u> | <u>4.87</u> |
+| MiniCPM3-4B | 3.80 | 3.70 | 3.90 |
+| DeepSeek-R1-Distill-Qwen-8B | 3.60 | 3.50 | 3.70 |
+
+Table 5. Comparison on MMLU, GSM8K and MATH
+| Method | MMLU | GSM8K | MATH | Human-Eval | MTBench |
+|---|---:|---:|---:|---:|---:|
+| LLaMA-4-17B-Instruct | 79.6 | 91.2 | 50.3 | 74.1 | 8.5 |
+| Qwen3-14B | 81.1 | 92.5 | 62.0 | 95.7 | 8.2 |
+| ChatGLM4.1V-9B | 72.4 | 79.6 | 30.4 | 71.8 | 8.3 |
+| MiniCPM3-4B | 67.2 | 81.1 | 46.6 | 72.1 | 8.4 |
+| Build-LLM-17B | 73.3 | 86.2 | 48.2 | 72.7 | 8.3 |
+
+Performance comparison of different retrieval-augmented generation methods on architectural knowledge question answering
+| Method | LLaMA-4-17B avg_score_10 | LLaMA-4-17B avg_time_s | LLaMA-4-17B F1 | Build-LLM Avg_score_10 | Build-LLM Avg_time_s | Build-LLM F1 |
+|---|---:|---:|---:|---:|---:|---:|
+| PathRAG_BGE-M3 | 7.3142 | 34.8721 | 0.6143 | 7.2068 | 36.1945 | 0.6016 |
+| PathRAG_JINA-EMBEDDINGS-V3 | 7.5817 | 31.9468 | 0.6315 | 7.4639 | 33.2754 | 0.6198 |
+| LightRAG_BGE-M3 | 7.8875 | 57.2136 | 0.6552 | 7.7341 | 59.8047 | 0.6425 |
+| LightRAG_JINA-EMBEDDINGS-V3 | 7.9641 | 54.7312 | 0.6627 | 7.8516 | 56.3289 | 0.6534 |
+| GraphRAG_BGE-M3 | 5.7128 | 489.3675 | 0.5536 | 5.6043 | 508.9421 | 0.5419 |
+| GraphRAG_JINA-EMBEDDINGS-V3 | 5.4382 | 586.9248 | 0.5264 | 5.5167 | 602.3813 | 0.5358 |
+| SimilarityRAG_BGE-M3 | 8.2473 | 15.9834 | 0.6926 | 8.1325 | 16.7429 | 0.6812 |
+| SimilarityRAG_JINA-EMBEDDINGS-V3 | 7.4286 | 17.3862 | 0.6257 | 7.3018 | 18.0956 | 0.6135 |
+| HybridRAG_BGE-M3 | 9.1847 | 16.9276 | 0.7749 | 9.2364 | 17.6418 | 0.7821 |
+| HybridRAG_JINA-EMBEDDINGS-V3 | 9.0365 | 16.2837 | 0.7621 | 8.9442 | 17.0573 | 0.7517 |
+
 *Figure 17) Bbox-normalized stepwise conversion evaluation of the parametric post-processing pipeline.*
 ![img](assets/17.png)
+
+Stepwise fidelity of the parametric post-processing pipeline under bbox-normalized evaluation
+| Transition | n | F1@1% | F1@2% | F1@3% | F1@5% | Completeness@3% | Correctness@3% |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| Fixed → PolyCube | 45 | 0.284 | 0.466 | 0.556 | 0.689 | 0.651 | 0.493 |
+| PolyCube → CoACD | 41 | 0.724 | 0.940 | 0.963 | 0.980 | 0.999 | 0.931 |
+| CoACD → Layered | 41 | 0.523 | 0.778 | 0.840 | 0.912 | 0.998 | 0.734 |
+
+Scale diagnostics summary across stage transitions
+| Transition | n | BBox diag ratio | BBox volume ratio | Center shift | Surface area ratio | Face count ratio |
+|---|---:|---:|---:|---:|---:|---:|
+| Fixed → PolyCube | 45 | 1.0000 | 1.0000 | 0.0000 | 1.4122 | 0.9811 |
+| PolyCube → CoACD | 41 | 1.0039 | 1.0184 | 0.0001 | 1.2129 | 0.6501 |
+| CoACD → Layered | 41 | 1.0000 | 1.0000 | 0.0012 | 2.0447 | 3.2522 |
 
 *Figure 18) Human evaluation on various LLMs.*
 ![img](assets/18.png)
