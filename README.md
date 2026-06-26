@@ -85,7 +85,7 @@ Best results are **bold**, and second-best results are <u>underlined</u>.
 | MiniCPM3-4B | 3.80 | 3.70 | 3.90 |
 | DeepSeek-R1-Distill-Qwen-8B | 3.60 | 3.50 | 3.70 |
 
-Table 5. Comparison on MMLU, GSM8K and MATH
+Comparison on MMLU, GSM8K and MATH
 | Method | MMLU | GSM8K | MATH | Human-Eval | MTBench |
 |---|---:|---:|---:|---:|---:|
 | LLaMA-4-17B-Instruct | 79.6 | 91.2 | 50.3 | 74.1 | 8.5 |
